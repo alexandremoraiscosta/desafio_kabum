@@ -31,7 +31,7 @@ echo "</table>";
 
 <div id="actions" class="row">
   <div class="col-md-12 mt-3">
-    <a href="/desafio_bluepex/index.php" class="btn btn-primary">Voltar</a>
+    <a href="/desafio_tecnico/index.php" class="btn btn-primary">Voltar</a>
   </div>
 </div>
 

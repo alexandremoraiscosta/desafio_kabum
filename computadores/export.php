@@ -2,7 +2,7 @@
 
 if(isset($_GET["export"]) && $_GET['export'] == 'csv')  
 {  
-     $connect = mysqli_connect("localhost", "root", "password", "desafio_bluepex");  
+     $connect = mysqli_connect("localhost", "root", "password", "desafio_tecnico");  
      header('Content-Type: text/csv; charset=utf-8');  
      header('Content-Disposition: attachment; filename=computadores.csv');  
      $output = fopen("php://output", "w");  
@@ -16,7 +16,7 @@ if(isset($_GET["export"]) && $_GET['export'] == 'csv')
 
      fclose($output);  
 } else {
-     $connect = mysqli_connect("localhost", "root", "password", "desafio_bluepex");
+     $connect = mysqli_connect("localhost", "root", "password", "desafio_tecnico");
      header('Content-Type: application/json; charset=utf-8');  
      header('Content-Disposition: attachment; filename=computadores.json');    
      $output = fopen("php://output", "w"); 

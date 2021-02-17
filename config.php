@@ -1,6 +1,6 @@
 <?php
 /** O nome do banco de dados*/
-define('DB_NAME', 'desafio_bluepex');
+define('DB_NAME', 'desafio_tecnico');
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');
 /** Senha do banco de dados MySQL */
@@ -13,7 +13,7 @@ if ( !defined('ABSPATH') )
 	
 /** caminho no server para o sistema **/
 if ( !defined('BASEURL') )
-	define('BASEURL', '/desafio_bluepex/');
+	define('BASEURL', '/desafio_tecnico/');
 	
 /** caminho do arquivo de banco de dados **/
 if ( !defined('DBAPI') )

@@ -2,7 +2,7 @@
     require_once('functions.php');
     index();	
 
-	$connect = mysqli_connect("localhost", "root", "password", "desafio_bluepex");  
+	$connect = mysqli_connect("localhost", "root", "password", "desafio_tecnico");  
 	$query ="SELECT * FROM computadores ORDER BY id desc";  
 	$result = mysqli_query($connect, $query);
 ?>
@@ -78,7 +78,7 @@
 
 <div id="actions" class="row">
   <div class="col-md-12 mt-3">
-    <a href="/desafio_bluepex/index.php" class="btn btn-primary">Voltar</a>
+    <a href="/desafio_tecnico/index.php" class="btn btn-primary">Voltar</a>
   </div>
 </div>
 

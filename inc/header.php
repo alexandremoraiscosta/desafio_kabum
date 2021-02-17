@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Alexandre Costa">
   <meta name="generator" content="Hugo 0.80.0">
-  <title>Desafio BluePex</title>
+  <title>Desafio Técnico</title>
 
   <link rel="stylesheet" href="<?php echo BASEURL; ?>css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
@@ -45,7 +45,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
   <div class="container">
-    <a class="navbar-brand" href="<?php echo BASEURL; ?>index.php">Desafio BluePex</a>
+    <a class="navbar-brand" href="<?php echo BASEURL; ?>index.php">Desafio Técnico</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

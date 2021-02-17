@@ -1,6 +1,6 @@
-CREATE DATABASE desafio_bluepex;
+CREATE DATABASE desafio_tecnico;
 
-USE desafio_bluepex;
+USE desafio_tecnico;
 
 CREATE TABLE computadores (
   id int(11) NOT NULL,
