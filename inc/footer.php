@@ -2,7 +2,7 @@
 
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container">
-    <span class="text-muted">&copy;2020 - Alexandre Costa</span>
+    <span class="text-muted">&copy;2021 - Alexandre Costa</span>
   </div>
 </footer>
 

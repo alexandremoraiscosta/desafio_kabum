@@ -24,7 +24,8 @@ function close_database($conn) {
 /**
  *  Pesquisa um Registro pelo ID em uma Tabela
  */
-function find( $table = null, $id = null ) {
+function find( $table = null, $id = null, $cliente_id = null ) {
+	
   
 	$database = open_database();
 	$found = null;
@@ -33,12 +34,22 @@ function find( $table = null, $id = null ) {
 	  if ($id) {
 	    $sql = "SELECT * FROM " . $table . " WHERE id = " . $id;
 	    $result = $database->query($sql);
-	    
+
+		
 	    if ($result->num_rows > 0) {
 	      $found = $result->fetch_assoc();
 	    }
 	    
-	  } else {
+	  }
+	  else if ($cliente_id) {
+		$sql = "SELECT * FROM " . $table . " WHERE cliente_id = " . $cliente_id;
+	    $result = $database->query($sql);
+	    
+	    if ($result->num_rows > 0) {
+	      $found = $result->fetch_all(MYSQLI_ASSOC);
+	    }
+	  }
+	  else {
 	    
 	    $sql = "SELECT * FROM " . $table;
 	    $result = $database->query($sql);
@@ -46,7 +57,7 @@ function find( $table = null, $id = null ) {
 	    if ($result->num_rows > 0) {
 	      $found = $result->fetch_all(MYSQLI_ASSOC);
         
-        /* Metodo alternativo
+        /* Método alternativo
         $found = array();
 
         while ($row = $result->fetch_assoc()) {
@@ -58,6 +69,29 @@ function find( $table = null, $id = null ) {
 	  $_SESSION['message'] = $e->GetMessage();
 	  $_SESSION['type'] = 'danger';
   }
+	
+	close_database($database);
+	return $found;
+}
+
+function verifyIfAdmin( $dados ) {
+	
+	$database = open_database();
+	$found = null;
+	try {
+		$sql = "SELECT * FROM admin WHERE usuario = '" . $dados["'usuario'"] . "' AND senha = '". $dados["'senha'"] ."'";
+
+		$result = $database->query($sql);
+
+		
+	    if ($result->num_rows > 0) {
+	      $found = $result->fetch_assoc();
+	    }
+	    
+	} catch (Exception $e) {
+	  $_SESSION['message'] = $e->GetMessage();
+	  $_SESSION['type'] = 'danger';
+  	}
 	
 	close_database($database);
 	return $found;
@@ -89,12 +123,11 @@ function save($table = null, $data = null) {
     $values .= "'$value',";
   }
 
-  // remove a ultima virgula
+  // remove a última virgula
   $columns = rtrim($columns, ',');
   $values = rtrim($values, ',');
   
   $sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-
   try {
     $database->query($sql);
 

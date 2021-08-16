@@ -1,10 +1,10 @@
 <?php
 /** O nome do banco de dados*/
-define('DB_NAME', 'desafio_tecnico');
+define('DB_NAME', 'kabum');
 /** Usuário do banco de dados MySQL */
 define('DB_USER', 'root');
 /** Senha do banco de dados MySQL */
-define('DB_PASSWORD', 'password');
+define('DB_PASSWORD', '');
 /** nome do host do MySQL */
 define('DB_HOST', 'localhost');
 /** caminho absoluto para a pasta do sistema **/
@@ -13,7 +13,7 @@ if ( !defined('ABSPATH') )
 	
 /** caminho no server para o sistema **/
 if ( !defined('BASEURL') )
-	define('BASEURL', '/desafio_tecnico/');
+	define('BASEURL', '/desafio_tecnico_kabum/');
 	
 /** caminho do arquivo de banco de dados **/
 if ( !defined('DBAPI') )

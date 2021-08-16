@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br" class="h-100">
 
@@ -50,23 +51,28 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <?php 
+      session_start();
+      if(isset($_SESSION['login'])) :
+    ?>
+
     <div class="collapse navbar-collapse" id="navbarsExample07">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Computadores</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Clientes</a>
           <ul class="dropdown-menu" aria-labelledby="dropdown07">
-            <li><a class="dropdown-item" href="<?php echo BASEURL; ?>computadores">Gerenciar Computadores</a></li>
-            <li><a class="dropdown-item" href="<?php echo BASEURL; ?>computadores/add.php">Novo Computador</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clientes">Gerenciar Clientes</a></li>
+            <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clientes/add.php">Novo Cliente</a></li>
           </ul>
         </li>
 
       </ul>
-      <!--
-      <form>
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-      </form>
-      -->
+
+
+      <a href="/desafio_tecnico_kabum/index.php?sair=1">sair</a>
+      <?php endif; ?>
+      
     </div>
   </div>
 </nav>
