@@ -1,7 +1,7 @@
 CREATE TABLE `clientes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(150) NOT NULL,
-  `data_nascimento` datetime NOT NULL,
+  `data_nascimento` varchar(30) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `rg` varchar(9) NOT NULL,
   `telefone` varchar(20) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `clientes` (
   KEY `rg` (`rg`),
   KEY `cpf` (`cpf`),
   KEY `nome` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4
 
 
 
