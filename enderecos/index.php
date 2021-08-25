@@ -1,12 +1,12 @@
 <?php 
-session_start();
-if(!isset($_SESSION['login'])) {
-  echo "usuario não logado, favor fazer login em : <a href='/desafio_tecnico_kabum/index.php'> link </a>";
-  exit;
-}
+	session_start();
+	if(!isset($_SESSION['login'])) {
+		echo "usuário não logado, favor fazer login em : <a href='/desafio_tecnico_kabum/index.php'> link </a>";
+	exit;
+	}
 ?>
 <?php
-    require_once('functions.php');
+	require_once('functions.php');
 	$cliente_id = $_GET['id'];
 	index($cliente_id);
 ?>
@@ -21,8 +21,6 @@ if(!isset($_SESSION['login'])) {
 		<div class="col-sm-6 text-right mt-5">
 	    	<a class="btn btn-primary" href="add.php?id=<?php echo $cliente_id; ?>"><i class="fa fa-plus"></i> Novo Endereço</a>
 	    	<a class="btn btn-default" href="index.php"><i class="fa fa-refresh"></i> Atualizar</a>
-			<a class="btn btn-default" href="export.php?export=csv"><i class="fa fa-refresh"></i> CSV</a>
-			<a class="btn btn-default" href="export.php?export=json"><i class="fa fa-refresh"></i> JSON</a>
 		</div>
 	</div>
 </header>
@@ -32,7 +30,7 @@ if(!isset($_SESSION['login'])) {
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		<?php echo $_SESSION['message']; ?>
 	</div>
-	<?php clear_messages(); ?>
+	
 <?php endif; ?>
 
 <table class="table table-hover mt-3">
@@ -73,5 +71,5 @@ if(!isset($_SESSION['login'])) {
   </div>
 </div>
 
-<?php include('modal.php'); ?>
+
 <?php include(FOOTER_TEMPLATE); ?>

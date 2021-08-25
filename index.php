@@ -40,10 +40,7 @@ if(!isset($_SESSION['login'])) : ?>
 <?php exit; ?>
 <?php endif; ?>
 
-
-
 <?php $db = open_database(); ?>
-
 
 <br/>
 
@@ -67,27 +64,14 @@ if(!isset($_SESSION['login'])) : ?>
 		<a href="clientes" class="btn btn-default">
 			<div class="row mt-3">
 				<div class="col-xs-12 text-center">
-					<i class="fa fa-laptop fa-5x"></i>
+					<i class="fa fa-users fa-5x"></i>
 				</div>
 				<div class="col-xs-12 text-center">
 					<p>Ver Clientes</p>
 				</div>
 			</div>
 		</a>
-	</div>
-
-	<div class="col-xs-6 col-sm-3 col-md-2 mt-3">
-		<a href="clientes/list-directory.php" class="btn btn-default">
-			<div class="row mt-3">
-				<div class="col-xs-12 text-center">
-					<i class="fa fa-paste fa-5x"></i>
-				</div>
-				<div class="col-xs-12 text-center">
-					<p>Listagem de Diretórios</p>
-				</div>
-			</div>
-		</a>
-	</div>
+	</div>	
 </div>
 
 <?php else : ?>

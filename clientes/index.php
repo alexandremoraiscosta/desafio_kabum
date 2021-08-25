@@ -20,8 +20,6 @@ if(!isset($_SESSION['login'])) {
 		<div class="col-sm-6 text-right mt-5">
 	    	<a class="btn btn-primary" href="add.php"><i class="fa fa-plus"></i> Novo Cliente</a>
 	    	<a class="btn btn-default" href="index.php"><i class="fa fa-refresh"></i> Atualizar</a>
-			<a class="btn btn-default" href="export.php?export=csv"><i class="fa fa-refresh"></i> CSV</a>
-			<a class="btn btn-default" href="export.php?export=json"><i class="fa fa-refresh"></i> JSON</a>
 		</div>
 	</div>
 </header>

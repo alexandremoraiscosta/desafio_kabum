@@ -1,14 +1,14 @@
 <?php 
-session_start();
-if(!isset($_SESSION['login'])) {
-  echo "usuario não logado, favor fazer login em : <a href='/desafio_tecnico_kabum/index.php'> link </a>";
-  exit;
-}
+	session_start();
+	if(!isset($_SESSION['login'])) {
+		echo "usuário não logado, favor fazer login em : <a href='/desafio_tecnico_kabum/index.php'> link </a>";
+	exit;
+	}	
 ?>
 <?php 
-  require_once('functions.php');
-  add();
-  $cliente_id = $_GET['id'];
+	require_once('functions.php');
+	$cliente_id = $_GET['id'];
+	add();	
 ?>
 
 <?php include(HEADER_TEMPLATE); ?>
